@@ -25,3 +25,15 @@ extension UIViewController {
                                 self)
     }
 }
+
+
+
+extension UIPageViewController{
+    func disableSwipeGesture() {
+            for view in self.view.subviews {
+                if let subView = view as? UIScrollView {
+                    subView.isScrollEnabled = false
+                }
+            }
+    }
+}
