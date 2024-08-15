@@ -10,10 +10,10 @@
 		5E1E353D2C623996000D7DEF /* UIViewController+AddChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E353C2C623996000D7DEF /* UIViewController+AddChild.swift */; };
 		5E1E353F2C6247C5000D7DEF /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E353E2C6247C5000D7DEF /* ImageViewController.swift */; };
 		5E1E35422C6248A6000D7DEF /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35412C6248A6000D7DEF /* CarouselItem.swift */; };
-		5E1E35442C62497D000D7DEF /* HomeLanderCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35432C62497D000D7DEF /* HomeLanderCarouselItem.swift */; };
-		5E1E35462C624AB9000D7DEF /* MaeveCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35452C624AB9000D7DEF /* MaeveCarouselItem.swift */; };
-		5E1E35482C624B31000D7DEF /* BlackNoirCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35472C624B31000D7DEF /* BlackNoirCarouselItem.swift */; };
-		5E1E354A2C624BAB000D7DEF /* ATrainCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35492C624BAB000D7DEF /* ATrainCarouselItem.swift */; };
+		5E1E35442C62497D000D7DEF /* ButcherCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35432C62497D000D7DEF /* ButcherCarouselItem.swift */; };
+		5E1E35462C624AB9000D7DEF /* FrenchieCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35452C624AB9000D7DEF /* FrenchieCarouselItem.swift */; };
+		5E1E35482C624B31000D7DEF /* HugheiCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35472C624B31000D7DEF /* HugheiCarouselItem.swift */; };
+		5E1E354A2C624BAB000D7DEF /* MmCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35492C624BAB000D7DEF /* MmCarouselItem.swift */; };
 		5E1E354F2C624C2A000D7DEF /* CarouselItemDataSourceProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E354E2C624C2A000D7DEF /* CarouselItemDataSourceProviderType.swift */; };
 		5E1E35512C624C4D000D7DEF /* CarouselItemDataSourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35502C624C4D000D7DEF /* CarouselItemDataSourceProvider.swift */; };
 		5E1E35572C634D75000D7DEF /* SegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1E35562C634D75000D7DEF /* SegmentedProgressBar.swift */; };
@@ -51,10 +51,10 @@
 		5E1E353C2C623996000D7DEF /* UIViewController+AddChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AddChild.swift"; sourceTree = "<group>"; };
 		5E1E353E2C6247C5000D7DEF /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		5E1E35412C6248A6000D7DEF /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
-		5E1E35432C62497D000D7DEF /* HomeLanderCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLanderCarouselItem.swift; sourceTree = "<group>"; };
-		5E1E35452C624AB9000D7DEF /* MaeveCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaeveCarouselItem.swift; sourceTree = "<group>"; };
-		5E1E35472C624B31000D7DEF /* BlackNoirCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackNoirCarouselItem.swift; sourceTree = "<group>"; };
-		5E1E35492C624BAB000D7DEF /* ATrainCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATrainCarouselItem.swift; sourceTree = "<group>"; };
+		5E1E35432C62497D000D7DEF /* ButcherCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButcherCarouselItem.swift; sourceTree = "<group>"; };
+		5E1E35452C624AB9000D7DEF /* FrenchieCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenchieCarouselItem.swift; sourceTree = "<group>"; };
+		5E1E35472C624B31000D7DEF /* HugheiCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HugheiCarouselItem.swift; sourceTree = "<group>"; };
+		5E1E35492C624BAB000D7DEF /* MmCarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MmCarouselItem.swift; sourceTree = "<group>"; };
 		5E1E354E2C624C2A000D7DEF /* CarouselItemDataSourceProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemDataSourceProviderType.swift; sourceTree = "<group>"; };
 		5E1E35502C624C4D000D7DEF /* CarouselItemDataSourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemDataSourceProvider.swift; sourceTree = "<group>"; };
 		5E1E35562C634D75000D7DEF /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
@@ -121,10 +121,10 @@
 		5E1E354B2C624BF4000D7DEF /* CarouselItems */ = {
 			isa = PBXGroup;
 			children = (
-				5E1E35432C62497D000D7DEF /* HomeLanderCarouselItem.swift */,
-				5E1E35452C624AB9000D7DEF /* MaeveCarouselItem.swift */,
-				5E1E35472C624B31000D7DEF /* BlackNoirCarouselItem.swift */,
-				5E1E35492C624BAB000D7DEF /* ATrainCarouselItem.swift */,
+				5E1E35432C62497D000D7DEF /* ButcherCarouselItem.swift */,
+				5E1E35452C624AB9000D7DEF /* FrenchieCarouselItem.swift */,
+				5E1E35472C624B31000D7DEF /* HugheiCarouselItem.swift */,
+				5E1E35492C624BAB000D7DEF /* MmCarouselItem.swift */,
 			);
 			path = CarouselItems;
 			sourceTree = "<group>";
@@ -351,13 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E1E35442C62497D000D7DEF /* HomeLanderCarouselItem.swift in Sources */,
+				5E1E35442C62497D000D7DEF /* ButcherCarouselItem.swift in Sources */,
 				5E87DCA02C6236A30005D86C /* CarouselViewController.swift in Sources */,
 				5E87DC722C6232430005D86C /* MainViewController.swift in Sources */,
-				5E1E35482C624B31000D7DEF /* BlackNoirCarouselItem.swift in Sources */,
-				5E1E354A2C624BAB000D7DEF /* ATrainCarouselItem.swift in Sources */,
+				5E1E35482C624B31000D7DEF /* HugheiCarouselItem.swift in Sources */,
+				5E1E354A2C624BAB000D7DEF /* MmCarouselItem.swift in Sources */,
 				5E87DC6E2C6232430005D86C /* AppDelegate.swift in Sources */,
-				5E1E35462C624AB9000D7DEF /* MaeveCarouselItem.swift in Sources */,
+				5E1E35462C624AB9000D7DEF /* FrenchieCarouselItem.swift in Sources */,
 				5E1E354F2C624C2A000D7DEF /* CarouselItemDataSourceProviderType.swift in Sources */,
 				5E1E353D2C623996000D7DEF /* UIViewController+AddChild.swift in Sources */,
 				5E1E35512C624C4D000D7DEF /* CarouselItemDataSourceProvider.swift in Sources */,
@@ -472,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -529,7 +529,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

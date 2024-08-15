@@ -1,5 +1,5 @@
 //
-//  ATrainCarouselItem.swift
+//  HomeLanderCarouselItem.swift
 //  Vought Showcase
 //
 //  Created by Burhanuddin Rampurawala on 06/08/24.
@@ -7,7 +7,8 @@
 
 import UIKit
 
-final class ATrainCarouselItem: CarouselItem {
+
+final class ButcherCarouselItem: CarouselItem {
     private var viewController: UIViewController?
     
     /// Get controller
@@ -17,7 +18,7 @@ final class ATrainCarouselItem: CarouselItem {
         // If not, create new view controller
         // else return the existing view controller
         guard let viewController = viewController else {
-            viewController = ImageViewController(imageName: "a_train")
+            viewController = ImageViewController(imageName: "butcher")
             return viewController!
         }
         return viewController

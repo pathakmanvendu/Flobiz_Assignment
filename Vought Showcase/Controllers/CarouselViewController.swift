@@ -9,28 +9,32 @@ import Foundation
 import UIKit
 
 
-final class CarouselViewController: UIViewController {
+final class CarouselViewController: UIViewController, SegmentedProgressBarDelegate {
+    func segmentedProgressBarChangedIndex(index: Int) {
+        currentItemIndex = index
+        let controller = getController(at: index)
+        pageViewController?.setViewControllers([controller], direction: .forward, animated: true, completion: nil)
+    }
+    
+    func segmentedProgressBarFinished() {
+        print("story finished")
+    }
     
     /// Container view for the carousel
     @IBOutlet private weak var containerView: UIView!
     
     /// Carousel control with page indicator
-    @IBOutlet private weak var carouselControl: UIPageControl!
+   // @IBOutlet private weak var carouselControl: UIPageControl!
 
 
+    private var segmentedProgressBar: SegmentedProgressBar!
+    
     /// Page view controller for carousel
     private var pageViewController: UIPageViewController?
     
     /// Carousel items
     private var items: [CarouselItem] = []
-    
-    /// Current item index
-    private var currentItemIndex: Int = 0 {
-        didSet {
-            // Update carousel control page
-            self.carouselControl.currentPage = currentItemIndex
-        }
-    }
+     var currentItemIndex: Int = 0
 
     /// Initializer
     /// - Parameter items: Carousel items
@@ -47,7 +51,46 @@ final class CarouselViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initPageViewController()
-        initCarouselControl()
+      //  initCarouselControl()
+        initSegmentedProgressBar()
+        setupTapGesture()
+    }
+    
+    private func setupTapGesture() {
+        let leftTapGesture = UITapGestureRecognizer(target: self, action: #selector(leftSideTap))
+        let rightTapGesture = UITapGestureRecognizer(target: self, action: #selector(rightSideTap))
+        
+        let screenWidth = view.bounds.width
+        let screenHeight = view.bounds.height
+        
+        let leftTapArea = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth / 3, height: screenHeight))
+        let rightTapArea = UIView(frame: CGRect(x: screenWidth * 2 / 3, y: 0, width: screenWidth / 3, height: screenHeight))
+        
+        
+        leftTapArea.backgroundColor = UIColor.clear
+        rightTapArea.backgroundColor = UIColor.clear
+        
+        leftTapArea.addGestureRecognizer(leftTapGesture)
+        rightTapArea.addGestureRecognizer(rightTapGesture)
+            
+        view.addSubview(leftTapArea)
+        view.addSubview(rightTapArea)
+    }
+    
+    @objc func  leftSideTap() {
+        let previousIndex = (currentItemIndex - 1 + items.count) % items.count
+        let controller = getController(at: previousIndex)
+        pageViewController?.setViewControllers([controller], direction: .reverse, animated: true, completion: nil)
+        currentItemIndex = previousIndex
+        segmentedProgressBar.rewind()
+    }
+    
+    @objc func rightSideTap() {
+        let nextIndex = (currentItemIndex + 1) % items.count
+        let controller = getController(at: nextIndex)
+        pageViewController?.setViewControllers([controller], direction: .forward, animated: true, completion: nil)
+        currentItemIndex = nextIndex
+        segmentedProgressBar.skip()
     }
     
     
@@ -62,8 +105,9 @@ final class CarouselViewController: UIViewController {
         pageViewController?.dataSource = self
         pageViewController?.delegate = self
         pageViewController?.setViewControllers(
-            [getController(at: currentItemIndex)], direction: .forward, animated: true)
+            [getController(at: currentItemIndex)], direction: .forward, animated: false)
 
+        pageViewController?.disableSwipeGesture()
         guard let theController = pageViewController else {
             return
         }
@@ -72,23 +116,25 @@ final class CarouselViewController: UIViewController {
         add(asChildViewController: theController,
             containerView: containerView)
     }
+    
 
-    /// Initialize carousel control
-    private func initCarouselControl() {
-        // Set page indicator color
-        carouselControl.currentPageIndicatorTintColor = UIColor.darkGray
-        carouselControl.pageIndicatorTintColor = UIColor.lightGray
+     private func initSegmentedProgressBar(){
+        segmentedProgressBar = SegmentedProgressBar(numberOfSegments: items.count, duration: 5.0)
+        segmentedProgressBar.delegate = self
         
-        // Set number of pages in carousel control and current page
-        carouselControl.numberOfPages = items.count
-        carouselControl.currentPage = currentItemIndex
+        segmentedProgressBar.frame = CGRect(x: 20, y: view.safeAreaInsets.top + 60, width: view.frame.width - 40, height: 4)
+        view.addSubview(segmentedProgressBar)
         
-        // Add target for page control value change
-        carouselControl.addTarget(
-                    self,
-                    action: #selector(updateCurrentPage(sender:)),
-                    for: .valueChanged)
+        segmentedProgressBar.startAnimation()
     }
+    
+   
+    
+    func updatePageController() {
+        let controller = getController(at: currentItemIndex)
+        pageViewController?.setViewControllers([controller], direction: .forward, animated: false, completion: nil)
+    }
+
 
     /// Update current page
     /// Parameter sender: UIPageControl
